@@ -9,5 +9,5 @@ import 'element-plus/theme-chalk/dark/css-vars.css'
 const app = createApp(App)
 app.use(pinia)
 app.use(router)
-// app.use(VueI18n)
+// app.use(vueI18n)
 app.mount('#app')

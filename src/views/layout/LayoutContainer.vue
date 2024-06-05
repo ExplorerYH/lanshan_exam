@@ -62,7 +62,7 @@ const handleCommand = async (key) => {
       >
         <el-menu-item index="/article/channel">
           <el-icon><Management /></el-icon>
-          <span>文章分类</span>
+          <span>{{ $t('language.category') }}</span>
         </el-menu-item>
         <el-menu-item index="/article/manage">
           <el-icon><Promotion /></el-icon>
@@ -102,6 +102,18 @@ const handleCommand = async (key) => {
         <el-dropdown placement="bottom-end" @command="handleCommand">
           <!-- 展示给用户，默认看到的 -->
           <span class="el-dropdown__box">
+            <!-- <el-tag id="lantag">{{$t('language.lan')}}</el-tag>
+            <el-dropdown
+            trigger="click"
+            @command="(command)=>clickCommand(command)">
+          <el-icon class="el-icon--right"><arrow down /></el-icon>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item command="chinese">简体中文</el-dropdown-item>
+              <el-dropdown-item command="english">English</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+          </el-dropdown> -->
             <Dark />
             <el-avatar :src="userStore.user.user_pic || avatar" />
             <el-icon><CaretBottom /></el-icon>
