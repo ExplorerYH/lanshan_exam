@@ -13,6 +13,7 @@ import avatar from '@/assets/default.png'
 import { useUserStore } from '@/stores'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import Dark from './dark.vue'
 const userStore = useUserStore()
 const router = useRouter()
 
@@ -101,6 +102,7 @@ const handleCommand = async (key) => {
         <el-dropdown placement="bottom-end" @command="handleCommand">
           <!-- 展示给用户，默认看到的 -->
           <span class="el-dropdown__box">
+            <Dark />
             <el-avatar :src="userStore.user.user_pic || avatar" />
             <el-icon><CaretBottom /></el-icon>
           </span>
